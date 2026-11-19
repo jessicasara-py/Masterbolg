@@ -3,12 +3,20 @@
         "id": 2,
         "author": "Jane Doe",
         "title": "Second Post",
-        "content": "This is the only post."
+        "content": "This is the only post.",
+        "likes": 3
     },
     {
         "id": 3,
         "author": "Jessica",
         "title": "Hello!",
-        "content": "New post from me :) xoxo"
+        "content": "New post from me :) xoxo",
+        "likes": 1
+    },
+    {
+        "id": 4,
+        "author": "Jessica",
+        "title": "Me again :)",
+        "content": "Just wanted to say hi again :)"
     }
 ]

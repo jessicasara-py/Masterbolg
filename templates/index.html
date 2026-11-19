@@ -17,6 +17,12 @@
         <p><em>Written by {{ post.author }}</em></p>
         <p>{{ post.content }}</p>
 
+        <p>Likes: {{ post.get('likes', 0) }}</p>
+
+        <a href="{{ url_for('like', post_id=post.id) }}">
+            ❤️ Like
+        </a>
+
         <a href="{{ url_for('update', post_id=post.id) }}">Bearbeiten</a>
 
         <a href="{{ url_for('delete', post_id=post.id) }}">Löschen</a>

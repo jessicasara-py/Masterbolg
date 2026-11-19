@@ -90,5 +90,19 @@ def delete(post_id):
     return redirect(url_for('index'))
 
 
+@app.route('/like/<int:post_id>')
+def like(post_id):
+    blog_posts = load_posts()
+
+    for post in blog_posts:
+        if post["id"] == post_id:
+            post["likes"] = post.get("likes", 0) + 1
+            break
+
+    save_posts(blog_posts)
+
+    return redirect(url_for('index'))
+
+
 if __name__ == '__main__':
     app.run("127.0.0.1", port=3000, debug=True)
